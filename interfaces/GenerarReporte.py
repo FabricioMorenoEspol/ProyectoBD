@@ -1,8 +1,5 @@
 
 
-def GenerarReporte():
-
-    """ Implementacion de la interfaz """
-
-
+def GenerarReporte(connection):
+    
     return None
