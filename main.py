@@ -3,14 +3,13 @@ import pymysql
 
 """ CREDENCIALES DE UNA BASE DE DATOS LOCAL MYSQL """
 USER= "root"
-PASSWORD = "root"
+PASSWORD = "Davidariel200"
 IP = "127.0.0.1"
 PORT = "3306"
 
 "CONEXION A LA BASE DE DATOS"
 engine = create_engine(f"mysql+pymysql://{USER}:{PASSWORD}@{IP}:{PORT}/FacebookAds")
 connection = engine.connect()
-
 
 """ Reporte del total a pagar por cada Conjunto de Anuncios """
 
@@ -21,8 +20,6 @@ results1 = connection.execute(consulta1).fetchmany(size=10)
 
 for nombre,Total in results1:
     print(nombre +"----->"+"$"+str(Total))
-
-
 
 
 """ Reporte del anuncio cuya factura fue la mas alta """
@@ -59,7 +56,6 @@ results4 = connection.execute(consulta4).fetchmany(size=10)
 
 for nombreAnun, in results4:
     print(nombreAnun)
-
 
 
 connection.close()
