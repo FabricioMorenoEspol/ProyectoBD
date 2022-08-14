@@ -64,7 +64,7 @@ def CrearCampana(conn):
         CONSULTA2 = f"insert into CONJUNTO_DE_ANUNCIOS(ID_CAMPAÑA,Pagina_Referencia,Nombre,Presupuesto) values({idTablaCampana},'{nombrePaginaReferencia}','{nombreConjuntoAnuncio}',{presupuesto})"
         result2 = conn.execute(CONSULTA2)
         idTablaConjuntoAnuncio = result2.lastrowid
-        print(idTablaConjuntoAnuncio)
+        
 
         ubicacion = ""
         generacion = ""
@@ -89,7 +89,7 @@ def CrearCampana(conn):
         madre=input("Madre:")
         comportamientos=input("Comportamientos:")
         
-        CONSULTA3 = f"insert into AUDIENCIA(ID_ConjuntoAnuncio,Ubicacion,Generación,Trabajo,Edad,Finanzas,Género,Afinidad_étnica,Padre,Comportamientos,Madre) values({idTablaConjuntoAnuncio},'{ubicacion}','{generacion}','{trabajo}',{edad},'{finanzas}','{genero}','{afinidadEtnica}','{padre}','{comportamientos}','{madre}')"
+        CONSULTA3 = f"insert into AUDIENCIA(ID_ConjuntoAnuncio_De_Anuncios,Ubicacion,Generación,Trabajo,Edad,Finanzas,Género,Afinidad_étnica,Padre,Comportamientos,Madre) values({idTablaConjuntoAnuncio},'{ubicacion}','{generacion}','{trabajo}',{edad},'{finanzas}','{genero}','{afinidadEtnica}','{padre}','{comportamientos}','{madre}')"
         result3 = conn.execute(CONSULTA3)
         idTablaAudiencia = result3.lastrowid
         print(idTablaAudiencia)
@@ -124,7 +124,7 @@ def CrearCampana(conn):
             textoSecundario=input("Texto secundario(Opcional): ")
             link=input("Link: ")
 
-            CONSULTA4 = f"insert into ANUNCIO (ID_ConjuntoAnuncio,Nombre,Tipo_Formato) values({idTablaConjuntoAnuncio},'{nombreAnuncio}', {tipoDeFormato})"
+            CONSULTA4 = f"insert into ANUNCIO (ID_ConjuntoAnuncio_De_Anuncios,Nombre,Tipo_Formato) values({idTablaConjuntoAnuncio},'{nombreAnuncio}', {tipoDeFormato})"
             result4 = conn.execute(CONSULTA4)
             idTablaAnuncio= result4.lastrowid
             print(idTablaAnuncio)
