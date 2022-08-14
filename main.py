@@ -38,19 +38,23 @@ while not opcElegida == 5:
     print("5.Salir")
 
     opcElegida = int(input("Seleccione su respuesta: "))
-
-    while not (opcElegida>=1 and opcElegida<=5):
-        opcElegida=int(input("Seleccione su respuesta: "))
+ 
+    while (opcElegida>=1 and opcElegida<5):
+        
         if opcElegida == 1:
             c1.CrearCampana(connection)
+            opcElegida = 0
         elif opcElegida == 2:
             c2.GenerarReporte(connection)
+            opcElegida = 0
         elif opcElegida == 3:
             c3.ActualizarDatos(connection)
+            opcElegida = 0
         elif opcElegida == 4:
             c4.EliminarDatos(connection)
-        elif opcElegida == 5:
-            print("Bye")
-
+            opcElegida = 0
+            
+        
+print("Bye")
 
 connection.close()
