@@ -14,7 +14,7 @@ def GenerarReporte(connection):
         if opcion == 1:
             print("Reporte del total a pagar por cada Conjunto de Anuncios \nNombre | Total")
 
-            consulta1 = "select CA.nombre, sum(Cantidad_Pago) from ANUNCIO A join CONJUNTO_DE_ANUNCIOS CA on A.ID_ConjuntoAnuncio = CA.ID_ConjuntoAnuncio join FACTURA F on A.ID_Anuncio=F.ID_Anuncio group by CA.Nombre;"
+            consulta1 = "select CA.nombre, sum(Cantidad_Pago) from ANUNCIO A join CONJUNTO_DE_ANUNCIOS CA on A.ID_Conjunto_De_Anuncios = CA.ID_Conjunto_De_Anuncios join FACTURA F on A.ID_Anuncio=F.ID_Anuncio group by CA.Nombre;"
             results1 = connection.execute(consulta1).fetchmany(size=10)
 
             for nombre, Total in results1:
@@ -31,7 +31,7 @@ def GenerarReporte(connection):
             print(
                 "\nReporte de cantidad de anuncios publicados por cada campaña \nCampana | Total anuncios publicados ")
 
-            consulta3 = "select cam.Nombre,count(ID_Anuncio) from CAMPAÑA as cam, CONJUNTO_DE_ANUNCIOS as con, ANUNCIO anun where cam.ID_Campaña=con.ID_Campaña and con.ID_ConjuntoAnuncio = anun.ID_ConjuntoAnuncio group by cam.Nombre"
+            consulta3 = "select cam.Nombre,count(ID_Anuncio) from CAMPAÑA as cam, CONJUNTO_DE_ANUNCIOS as con, ANUNCIO anun where cam.ID_Campaña=con.ID_Campaña and con.ID_Conjunto_De_Anuncios = anun.ID_Conjunto_De_Anuncios group by cam.Nombre"
             results3 = connection.execute(consulta3).fetchmany(size=10)
 
             for nombreCam, totalAnun in results3:
