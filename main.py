@@ -1,15 +1,21 @@
 
+import dotenv
 from sqlalchemy import create_engine, Table, MetaData,select
 import pymysql
+from dotenv import load_dotenv
+import os
 
 import interfaces.GenerarReporte as c1
 import interfaces.GenerarReporte as c2
 import interfaces.ActualizarDatos as c3
 import interfaces.EliminarDatos as c4
 
+""" CARGANDO VARIABLES DE ENTORNO """
+load_dotenv()
+
 """ CREDENCIALES DE UNA BASE DE DATOS LOCAL MYSQL """
 USER= "root"
-PASSWORD = "Davidariel200"
+PASSWORD = os.getenv("PASSWORD")
 IP = "127.0.0.1"
 PORT = "3306"
 
