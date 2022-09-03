@@ -1,6 +1,7 @@
 use FacebookAds;
-insert into CAMPAÑA(Nombre,Categoria) 
-values('Trafico web','Credito'),
+insert into CAMPAÑA(Nombre,Categoria)
+values
+('Trafico web','Credito') ,
 ('Recomendacion App','Credito'),
 ('Catalogo','Credito'),
 ('Interaccion con clintes','TemasSociales'),
@@ -9,7 +10,22 @@ values('Trafico web','Credito'),
 ('Interes de los jovenes','TemasSociales'),
 ('Productos','Credito'),
 ('Novedades','TemasSociales'),
-('Tienda fisica','Credito');
+('Tienda fisica','Credito'),
+('Artículos','TemasSociales') ,
+('Tienda nueva','Credito'),
+('Almacenes','Credito'),
+('Grandes Pedidos','Credito'),
+('Mascota','Credito'),
+('Para niños','TemasSociales'),
+('Sucursal Principal','Credito'),
+('Seccion frutas','Credito'),
+('Recuerdos','Credito'),
+('Para toda la familia','Credito'),
+('Beneficios','Credito'),
+('Patrocinadores','Credito'),
+('Apoyo social','TemasSociales'),
+('Mercado internacional','Credito'),
+('Atencion al cliente','TemasSociales');
 
 insert into OBJETIVOS(Reconocimiento_De_Marca) values(true);
 insert into OBJETIVOS(Alcance) values(true);
@@ -33,7 +49,22 @@ values(1, 'Subasta','Atraer la atencion a la pagina web',3),
 (7,'Subasta','Llamar la atencion de los mas jovenes',4),
 (8,'Subasta','Nuevos productos',10),
 (9,'Subasta','Novedades de la empresa',2),
-(10,'Subasta','Lugar de compra fisica',11);
+(10,'Subasta','Lugar de compra fisica',11),
+(11, 'Subasta','Informacion de articulos especiales',10),
+(12, 'Subasta','Publicidad de nuevas tiendas',10),
+(13, 'Subasta','Ubicacion de almacenes',5),
+(14, 'Subasta','Como realizar grandes pedidos',10),
+(15, 'Subasta','Mascota representativa de la marca',9),
+(16, 'Subasta','Intereses de los mas pequeños',7),
+(17, 'Subasta','Publicidad de la sucursal principal',5),
+(18, 'Subasta','Nueva venta de frutas',10),
+(19, 'Subasta','Recuerdos personalizados',5),
+(20, 'Subasta','Momentos en familia',7),
+(21, 'Subasta','El beneficio de nuestros productos',4),
+(22, 'Subasta','Nuestros patrocinadores',4),
+(23, 'Subasta','Acciones sociales',9),
+(24, 'Subasta','Expancion internacional',1),
+(25, 'Subasta','Atencion al cliente',9);
 
 insert into CONJUNTO_DE_ANUNCIOS(ID_CAMPAÑA,Pagina_Referencia,Nombre,Presupuesto) 
 values(1,'Mishkila Miel','Principal',250),
@@ -45,7 +76,22 @@ values(1,'Mishkila Miel','Principal',250),
 (7,'Jovenes y miel','Temporada',500),
 (8,'Nuevas versiones','Temporada',125),
 (9,'Esta Semana','Temporada',100),
-(10,'Promociones en casa','Temporada',300);
+(10,'Promociones en casa','Temporada',300),
+(11,'Membresias','Temporada',300),
+(12,'Tienda del sur','Temporada',100),
+(13,'Almacen principal','Temporada',200),
+(14,'Consejos','Temporada',260),
+(15,'Milky','Temporada',550),
+(16,'Nuevas recetas','Temporada',100),
+(17,'Gran variedad','Temporada',150),
+(18,'Frutas de temporada','Temporada',198),
+(19,'Llaveron de Milky','Temporada',280),
+(20,'Eventos mensuales','Temporada',300),
+(21,'Beneficios a la piel','Temporada',300),
+(22,'MSO inc.','Temporada',356),
+(23,'Donaciones','Temporada',323),
+(24,'Tiendas en el extranjero','Temporada',352),
+(25,'Numeros de Informacion','Temporada',300);
 
 insert into CALENDARIO(ID_Conjunto_De_Anuncios,Fecha_inicio,Fecha_fin,Hora_inicio,Hora_fin) 
 values(1,'2022-07-07', '2022-12-07','08:00','20:00'),
@@ -57,7 +103,22 @@ values(1,'2022-07-07', '2022-12-07','08:00','20:00'),
 (7,'2022-01-01', '2023-03-01','00:00','23:59'),
 (8,'2023-01-01', '2023-12-31','00:00','22:59'),
 (8,'2022-01-01', '2022-05-30','00:00','22:59'),
-(10,'2022-01-01', '2022-07-30','00:00','22:59');
+(10,'2022-01-01', '2022-07-30','00:00','22:59'),
+(11,'2022-09-01', '2023-09-01','00:00','20:59'),
+(12,'2022-06-01', '2023-06-01','06:00','20:59'),
+(13,'2022-05-01', '2023-05-01','01:00','21:59'),
+(14,'2022-04-01', '2023-04-01','00:00','22:59'),
+(15,'2022-05-01', '2023-05-01','05:00','21:59'),
+(16,'2022-08-01', '2023-08-01','03:00','22:59'),
+(17,'2022-10-01', '2023-10-01','02:00','23:59'),
+(18,'2022-11-01', '2023-11-01','09:00','22:59'),
+(19,'2022-06-01', '2023-06-01','02:00','23:59'),
+(20,'2022-02-01', '2023-02-01','01:00','20:59'),
+(21,'2022-12-01', '2023-12-01','05:00','21:59'),
+(22,'2022-06-01', '2023-06-01','06:00','20:59'),
+(23,'2022-09-01', '2023-09-01','02:00','22:59'),
+(24,'2022-09-01', '2023-09-01','03:00','23:59'),
+(25,'2022-07-01', '2023-07-01','04:00','22:59');
 
 insert into AUDIENCIA(ID_Conjunto_De_Anuncios,Ubicacion,Generación,Trabajo,Edad,Finanzas,Género,Afinidad_étnica,Padre,Comportamientos,Madre)
 values(2,'guayaquil','Milenials','Ninguno',22,'Ninguna','masculino','afro','no','juega volley','si'),
@@ -69,7 +130,22 @@ values(2,'guayaquil','Milenials','Ninguno',22,'Ninguna','masculino','afro','no',
 (10,'quito','x','Nutricionista',21,'Ninguna','masculino','blanco','no','saludable','si'),
 (5,'cuenca','z','Ninguna',25,'Tarjeta de credito','masculino','blanco','si','familiar','si'),
 (7,'guayaquil','x','Ninguna',14,'Ninguna','todos','todos','si','entretenimiento','si'),
-(9,'guayaquil','x','Nutricionista',20,'Efectivo','todos','blanco','si','familiar','si');
+(9,'guayaquil','x','Nutricionista',20,'Efectivo','todos','blanco','si','familiar','si'),
+(11,'esmeraldas','x','Nutricionista',20,'Efectivo','todos','todos','no','familiar','si'),
+(12,'esmeraldas','y','Ninguno',18,'Efectivo','todos','todos','si','entretenimiento','no'),
+(13,'guayaquil','y','Profesor',25,'Efectivo','todos','todos','no','saludabler','si'),
+(14,'quito','z','Nutricionista',15,'Efectivo','todos','todos','si','saludable','si'),
+(15,'quito','y','Ninguno',22,'Efectivo','todos','todos','no','familiar','si'),
+(16,'cuenca','x','Ninguno',21,'Efectivo','todos','todos','si','entretenimiento','no'),
+(17,'guayaquil','x','Ninguno',20,'Efectivo','todos','todos','no','familiar','si'),
+(18,'guayaquil','x','Nutricionista',20,'Efectivo','todos','todos','si','saludable','no'),
+(19,'cuenca','z','Nutricionista',16,'Efectivo','todos','blanco','si','familiar','si'),
+(20,'cuenca','z','Ninguno',18,'Efectivo','todos','blanco','si','saludable','si'),
+(21,'quito','x','Nutricionista',20,'Efectivo','todos','blanco','no','familiar','si'),
+(22,'esmeraldas','x','Nutricionista',26,'Efectivo','todos','blanco','si','saludable','no'),
+(23,'guayaquil','z','Ninguno',19,'Efectivo','todos','blanco','no','entretenimiento','si'),
+(24,'cuenca','x','Ninguno',19,'Efectivo','todos','blanco','no','familiar','no'),
+(25,'guayaquil','y','Profesor',20,'Efectivo','todos','todos','si','familiar','no');
 
 insert into EVENTOS_DE_VIDA(Audiencia,Nombre) 
 values(1,'Trabajo'),
@@ -111,7 +187,22 @@ values(1,'Lo que puedes encontrar', 1),
 (9,'Para adultos',3),
 (7,'Para jovenes',2),
 (6,'Para todos',1),
-(8,'El producto qu buscas',2);
+(8,'El producto qu buscas',2),
+(11,'Nuevo Articulo',4),
+(12,'Buenos precios',4),
+(13,'Encontraras de todo',4),
+(14,'Guia',4),
+(15,'Pasatiempos',4),
+(16,'Guia recetas',4),
+(17,'Todo lo que quieras',4),
+(18,'Grandes delicias',4),
+(19,'A buen Precion',4),
+(20,'Disfruta en familia',4),
+(21,'Tu piel',4),
+(22,'Gran colaborador',4),
+(23,'Creando sonrisas',4),
+(24,'En todas partes',4),
+(25,'Atenciones',4);
 
 insert into FACTURA (Fecha_Pago,Descripcion,Cantidad_Pago,Correo_Admin,ID_Anuncio)
 values(Date '2022-09-07', 'Primer pago del anuncio 1',50,'Admin_1_@hotmail.com',1),
@@ -123,22 +214,52 @@ values(Date '2022-09-07', 'Primer pago del anuncio 1',50,'Admin_1_@hotmail.com',
 (Date '2019-11-1','s',80,'juan@hotmail.com',6),
 (Date '2018-11-1','s',500,'andres@hotmail.com',7),
 (Date '2017-11-1','s',100,'mariop@hotmail.com',8),
-(Date '2015-11-1','s',100,'mariop@hotmail.com',9) ; 
+(Date '2015-11-1','s',100,'mariop@hotmail.com',9),
+(Date  '2022-10-19', 'Primer pago del anuncio 13',75,'Admin_1_@hotmail.com',13),
+(Date  '2022-11-12', 'Primer pago del anuncio 14',75,'juan@hotmail.com',14),
+(Date  '2022-10-10', 'Primer pago del anuncio 15',75,'Admin_1_@hotmail.com',15),
+(Date  '2022-09-10', 'Primer pago del anuncio 22',75,'juan@hotmail.com',22),
+(Date  '2022-09-23', 'Segundo pago del anuncio 7',75,'juan@hotmail.com',7),
+(Date  '2022-10-23', 'Primer pago del anuncio 17',75,'mariop@hotmail.com',17),
+(Date  '2022-11-12', 'Segundo pago del anuncio 15',75,'mariop@hotmail.com',15),
+(Date  '2022-12-23', 'Tercer pago del anuncio 15',75,'Admin_1_@hotmail.com',15),
+(Date  '2022-12-22', 'Segundo pago del anuncio 22',75,'juan@hotmail.com',22),
+(Date  '2022-11-22', 'Segundo pago del anuncio 17',75,'andres@hotmail.com',17),
+(Date  '2022-11-10', 'Segundo pago del anuncio 13',75,'Admin_1_@hotmail.com',13),
+(Date  '2022-12-13', 'Segundo pago del anuncio 14',75,'mariop@hotmail.com',14),
+(Date  '2022-12-19', 'Tercer pago del anuncio 13',75,'andres@hotmail.com',13),
+(Date  '2022-10-17', 'Pago del anuncio 1',75,'Admin_1_@hotmail.com',1),
+(Date  '2022-12-17', 'Pago del anuncio 4',75,'mariop@hotmail.com',4); 
 
 
 
 
 insert into CONTENIDO (ID_Anuncio,Titulo,Texto_Principal,Texto_Segundario,URL_SitioWeb)
-values(2,'Compra esto y gana la loteria',null,null,null),
+values(2,'Estrategias','Compra esto y gana la loteria',null,null),
 (3,'Ven aca que estamos de oferta','Apurate!!',null,null),
-(4,'No nos busques nosotros te buscamos',null,null,'Oficinasxyz.com'),
+(4,'Llegamos a todas partes','No nos busques nosotros te buscamos',null,'Oficinasxyz.com'),
 (1,'Se solicita urgentemento empleado','Dejanos saber de ti',null,'empresaW.com'),
 (5,'Te presento Mishkila','Perfeccion',null,null),
 (6,'Ofertas imprecionantes','Apurate!!',null,null),
 (7,'Mira como te beneficia la miel','Es lo que buscas',null,null),
 (8,'Nuevos productos impresionantes',null,null,null),
 (9,'Nuevas presentaciones','Hermosura',null,null),
-(10,'Nueva ubicacion de compra','Conocelo!!',null,null);
+(10,'Nueva ubicacion de compra','Conocelo!!',null,null),
+(11,'Nuevas membresias','Apresurate y adquierelas!!',null,null),
+(12,'Nueva tienda','Grandes ofertas',null,'Mishkila.com'),
+(13,'Todo lo que te imagines','Conocelo!!',null,null),
+(14,'Pedidos','Realiza tus pedidos en pocos pasos',null,null),
+(15,'Milky y sus ocurrencias','Que travieso',null,'Mylky.ec'),
+(16,'Limonada con miel','Una delicia',null,null),
+(17,'Todo lo que busques','Lo tenemos!',null,null),
+(18,'Frutillas y Kiwy','Delicias con miel',null,'frutasYMas.com'),
+(19,'Hermoso diseño','Adquierelo ya!!',null,null),
+(20,'Presentacion universitaria','Conoce cuando es',null,null),
+(21,'Piel mas sana','Revisa sus propiedades',null,null),
+(22,'Patrocinios','Agradecemos a nuestros patrocinadores',null,'empresaW.com'),
+(23,'Ayuda social','Es un honor poder ayudar a la siciedad. Revisa las actividades realizadas',null,'fundaciones.org'),
+(24,'Desde ahora, mas cerca de ti','Nuevas tiendas internacionales',null,null),
+(25,'Inconvenientes','Si tiene algun inconveniente acerquese a nuestras sucursales o tambien puede llamarnos al 09XXXXXXX',null,null);
 
 
 
