@@ -8,7 +8,7 @@ create user 'Kevin'@'localhost' identified by '12345';
 	grant select,insert,update on FacebookAds.* to 'Kevin'@'localhost';
     grant execute on procedure FacebookAds.CambiarObjetivoCampaña to 'Kevin'@'localhost';
     grant execute on procedure FacebookAds.CambiarNombreCampaña to 'Kevin'@'localhost';
-    grant execute on procedure FacebookAds.ObtenerTotalAnuncios to 'Kevin'@'localhost';
+    grant execute on procedure FacebookAds.ObtenerTotalAnunciosPorFormato to 'Kevin'@'localhost';
     
 
 create user 'Jose'@'localhost' identified by 'estoyAP';
@@ -24,7 +24,7 @@ create user 'Baidal'@'localhost' identified by 'abcd';
     grant select,insert on FacebookAds.Factura to 'Baidal'@'localhost';
     grant select,insert on FacebookAds.Contenido to 'Baidal'@'localhost';
     
-    grant select,insert on FacebookAds.ViewNumAnunciosXCampaña to 'Baidal'@'localhost';
+    grant select on FacebookAds.ViewNumAnunciosXCampaña to 'Baidal'@'localhost';
     
     
 
