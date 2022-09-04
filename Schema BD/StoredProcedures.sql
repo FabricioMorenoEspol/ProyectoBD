@@ -1,5 +1,5 @@
 DELIMITER //
-create procedure obtenerTotalAnunciosPorFormato(in tipoFormato int,out total int)
+create procedure ObtenerTotalAnunciosPorFormato(in tipoFormato int,out total int)
 begin 
 	select count(Tipo_Formato)into total from ANUNCIO
 	group by Tipo_Formato
@@ -9,7 +9,7 @@ end//
 DELIMITER ;
 
 DELIMITER //
-create procedure cambiarNombreCampana(in idCam int,in nombreCam varchar(255))
+create procedure CambiarNombreCampaña(in idCam int,in nombreCam varchar(255))
 begin 
 	update CAMPAÑA
     set Nombre = nombreCam
@@ -19,7 +19,7 @@ end//
 DELIMITER ;
 
 DELIMITER //
-create procedure cambiarObjetivoCampana(in idCam int,in idObjetivo int )
+create procedure CambiarObjetivoCampaña(in idCam int,in idObjetivo int )
 begin 
 	update DESCRIPCION
     set Tipo_Objetivo = idObjetivo
@@ -27,7 +27,7 @@ begin
 end//
 DELIMITER ;
  
--- call obtenerTotalAnunciosPorFormato(3,@total);
+-- call ObtenerTotalAnunciosPorFormato(3,@total);
 -- select @total;
--- call cambiarNombreCampana(1,"Esto es una prueba");
--- call cambiarObjetivoCampana(1,2);
+-- call CambiarNombreCampaña(1,"Esto es una prueba");
+-- call CambiarObjetivoCampaña(1,2);
